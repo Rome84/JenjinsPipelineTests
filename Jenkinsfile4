@@ -1,0 +1,19 @@
+stage ('Deploy to Docker') {
+    when {
+        expression {
+            return containerId.isEmpty()
+        }
+    }
+    steps {
+        parallel (
+            "instance1" : {
+                environment {
+                    containerId = sh(script: "docker ps --quiet --filter name=${fullDockerImageName}", returnStdout: true).trim()
+                }
+                step {
+                    docker.image('some/image').run("--name ${fullDockerImageName}")
+                }
+            }
+        )
+    }
+}
