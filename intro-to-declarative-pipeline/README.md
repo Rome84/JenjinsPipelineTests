@@ -54,9 +54,6 @@ Although the code in this repository was originally created by employees of Clou
 
 # Contributors 
 
-* Contributor: [Kurt Madel](https://github.com/kmadel)
-* Contributor: [Craig Vitter](https://github.com/cvitter)
-* Contributor: [Eric Long](https://github.com/ericlong)
  
 # Questions, Feedback, Pull Requests Etc.
 
